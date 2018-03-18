@@ -1,14 +1,14 @@
-package br.com.onetoone.aircraft.dto;
+package br.com.celari.aircraft.dto;
 
 import org.flowable.task.api.Task;
 
-public class ACTask {
+public class TaskDTO {
 	
-	public ACTask() {
+	public TaskDTO() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public ACTask(Task task) {
+	public TaskDTO(Task task) {
 		// TODO Auto-generated constructor stub
 	}
 	

@@ -1,4 +1,4 @@
-package br.com.onetoone.aircraft.controller;
+package br.com.celari.aircraft.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.onetoone.aircraft.dto.ACProcessInstance;
-import br.com.onetoone.aircraft.service.ACProcessInstanceService;
+import br.com.celari.aircraft.dto.ProcessInstanceDTO;
+import br.com.celari.aircraft.service.ProcessInstanceService;
 
 @RestController
 @RequestMapping("/processintances")
 public class ProcessInstanceController {
 	
 	@Autowired
-	private ACProcessInstanceService processInstanceService;
+	private ProcessInstanceService processInstanceService;
 
 	@GetMapping("/echo")
 	public String echo(){
@@ -23,7 +23,7 @@ public class ProcessInstanceController {
 	}
 	
 	@PostMapping("/start/{processKey}")
-	public ACProcessInstance startProcessInstance(@PathVariable String processKey){
+	public ProcessInstanceDTO startProcessInstance(@PathVariable String processKey){
 		return processInstanceService.start(processKey);
 	}
 }

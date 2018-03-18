@@ -1,23 +1,20 @@
-package br.com.onetoone.aircraft.service;
+package br.com.celari.aircraft.service;
 
-import java.util.List;
 import java.util.Map;
 
 import org.flowable.engine.TaskService;
-import org.flowable.task.api.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.onetoone.aircraft.dto.ACTaskInstance;
-import br.com.onetoone.aircraft.dto.ACTaskFilter;
+import br.com.celari.aircraft.dto.TaskInstanceDTO;
 
 @Service
-public class ACTaskInstanceService {
+public class TaskInstanceService {
 
 	@Autowired
 	private TaskService taskService;
 
-	public void complete(ACTaskInstance taskInstance) {
+	public void complete(TaskInstanceDTO taskInstance) {
 		taskService.complete(taskInstance.getId(), taskInstance.getVariables());
 	}
 

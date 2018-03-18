@@ -1,6 +1,6 @@
-package br.com.onetoone.aircraft.dto;
+package br.com.celari.aircraft.dto;
 
-public class ACTaskFilter {
+public class TaskFilterDTO {
 	
 	private String assignee;
 	

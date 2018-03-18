@@ -1,8 +1,8 @@
-package br.com.onetoone.aircraft.dto;
+package br.com.celari.aircraft.dto;
 
 import java.util.Map;
 
-public class ACTaskInstance {
+public class TaskInstanceDTO {
 	
 	private String id;
 	private Map<String, Object> variables;

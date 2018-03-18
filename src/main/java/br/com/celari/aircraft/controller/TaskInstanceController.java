@@ -1,4 +1,4 @@
-package br.com.onetoone.aircraft.controller;
+package br.com.celari.aircraft.controller;
 
 import java.util.List;
 
@@ -9,19 +9,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.onetoone.aircraft.dto.ACTaskInstance;
-import br.com.onetoone.aircraft.dto.ACTaskFilter;
-import br.com.onetoone.aircraft.service.ACTaskInstanceService;
-
+import br.com.celari.aircraft.dto.TaskInstanceDTO;
+import br.com.celari.aircraft.service.TaskInstanceService;
+import br.com.celari.aircraft.dto.TaskFilterDTO;
 @RestController
 @RequestMapping("taskinstances")
 public class TaskInstanceController {
 
 	@Autowired
-	private ACTaskInstanceService taskInstanceService;
+	private TaskInstanceService taskInstanceService;
 	
 	@PostMapping("/complete")
-	public void complete(@RequestBody ACTaskInstance taskInstance){
+	public void complete(@RequestBody TaskInstanceDTO taskInstance){
 		taskInstanceService.complete(taskInstance);
 	}
 	
